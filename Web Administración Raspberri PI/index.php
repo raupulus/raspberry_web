@@ -57,7 +57,6 @@
 			<TR>
 				<TD>2</TD>
 				<TD><FORM action="" method="post"><INPUT type="submit" name="Activar2" value="Activar"/>
-					<H1>GPIO 2</H1><INPUT type="submit" name="Activar2" value="Activar"/>
 			<INPUT type="submit" name="Desactivar2" value="Desactivar"/>
 			<INPUT type="submit" name="UNparpadeo2" value="1Parpadeo"/>
 			<INPUT type="submit" name="Parpadear2" value="Parpadear"/>
