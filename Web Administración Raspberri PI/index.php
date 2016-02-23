@@ -33,7 +33,12 @@
 	
 	<BODY id="pines">
 		<H1>WEB DE CONTROL RaspberryPI</H1>
-		
+		<FORM action="" method="post">
+					<INPUT type="submit" name="Activar2" value="Activar"/>
+					<INPUT type="submit" name="Desactivar2" value="Desactivar"/>
+					<INPUT type="submit" name="UNparpadeo2" value="1Parpadeo"/>
+					<INPUT type="submit" name="Parpadear2" value="Parpadear"/>
+				</FORM>
 		<DIV id="cajamenuprincipal">
 			<NAV id="menuprincipal">
 				<UL>
@@ -56,12 +61,11 @@
 			</TR>
 			<TR>
 				<TD>2</TD>
-				<TD><FORM action="" method="post"><INPUT type="submit" name="Activar2" value="Activar"/>
-			<INPUT type="submit" name="Desactivar2" value="Desactivar"/>
-			<INPUT type="submit" name="UNparpadeo2" value="1Parpadeo"/>
-			<INPUT type="submit" name="Parpadear2" value="Parpadear"/>
+				<TD>
 					
-				</FORM></TD>
+				
+					
+				</TD>
 				<TD><IMG src="images/off.png" alt="Apagar"/></TD>
 				<TD><IMG src="images/on.png" alt="Encender"/></TD>
 				<TD><IMG src="images/on.png" alt="Encender"/></TD>
