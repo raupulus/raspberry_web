@@ -1,0 +1,64 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+/*
+----------------------
+TÍTULO
+----------------------
+*/
+H1 {
+	width: 100%;
+	margin: 0 0 10px 0;
+	padding: 8px;
+	background-color: black;
+	color: green;
+	text-align: center;
+}
+
+/*
+----------------------
+BARRA DE MENÚ
+----------------------
+*/
+#cajamenuprincipal {
+	width: 100%;
+	margin: 10px 0;
+	background-color: black;
+}
+#menuprincipal {
+	text-align: center;
+}
+#menuprincipal LI {
+	display: inline-block;
+	padding: 8px;
+	color: white;
+}
+#menuprincipal LI:hover {
+	color: black;
+	background-color: aliceblue;
+}
+#menuprincipal A {
+	
+}
+
+/*
+----------------------
+TABLA CONTROL GPIO
+----------------------
+*/
+#tablaprincipal {
+	min-width: 300px;
+	max-width: 900px;
+	margin: auto;
+	padding: 10px;
+	border: 5px groove black;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	vertical-align: middle;
+}
+#tablaprincipal TD {
+	padding: 5px;
+	border: 3px groove red;
+}
