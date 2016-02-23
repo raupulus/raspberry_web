@@ -12,7 +12,7 @@ H1 {
 	margin: 0 0 10px 0;
 	padding: 8px;
 	background-color: black;
-	color: green;
+	color: #B1DB0A;
 	text-align: center;
 }
 
@@ -61,4 +61,10 @@ TABLA CONTROL GPIO
 #tablaprincipal TD {
 	padding: 5px;
 	border: 3px groove red;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+#tablaprincipal IMG {
+	width: 80px;
+	height: 80px;
 }
