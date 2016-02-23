@@ -6,8 +6,7 @@
 		<LINK rel="shortcut icon" href="./images/favicon.png"/>
 		<LINK rel="stylesheet" href="./style.css"/>
 		<SCRIPT src="./scripts.js"></SCRIPT>
-	</HEAD>
-	<?php
+		<?php
 // Funciones PHP del pin GPIO 2
 	if ($_POST[Activar2]) { 
 		$a=exec("sudo python /var/www/webRaspberriPI/GPIO/2/activar.py");
@@ -30,6 +29,8 @@
 	}
 // Fin de las funciónes del pin GPIO 2
 ?>
+	</HEAD>
+	
 	<BODY id="pines">
 		<H1>WEB DE CONTROL RaspberryPI</H1>
 		
