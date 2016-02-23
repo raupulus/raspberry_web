@@ -9,7 +9,7 @@
 <?php
 // Funciones PHP del pin GPIO 2
 	if ($_POST[Activar2]) { 
-		$a=exec("sudo python /var/www/webRaspberriPI/GPIO/2activar.py");
+		$a=exec("sudo python /var/www/webRaspberriPI/GPIO/2/activar.py");
 		echo $a;
 	}
 
