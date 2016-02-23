@@ -94,7 +94,15 @@
 				<TD></TD>
 			</TR>
 			<TR>
-				<TD>3</TD>
+				<TD>3
+				<!--ACCIONES PARA GPIO3-->
+		<FORM action="" method="post">
+			<H1>GPIO 3</H1><INPUT type="submit" name="Activar3" value="Activar"/>
+			<INPUT type="submit" name="Desactivar3" value="Desactivar"/>
+			<INPUT type="submit" name="UNparpadeo3" value="1Parpadeo"/>
+			<INPUT type="submit" name="Parpadear3" value="Parpadear"/>
+		</FORM>
+				</TD>
 				<TD><IMG src="images/on.png" alt="Encender"/></TD>
 				<TD><IMG src="images/off.png" alt="Apagar"/></TD>
 				<TD><IMG src="images/on.png" alt="Encender"/></TD>
