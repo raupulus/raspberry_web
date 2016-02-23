@@ -28,12 +28,34 @@
 		echo $a;
 	}
 // Fin de las funciónes del pin GPIO 2
+		
+// Funciones PHP del pin GPIO 3
+	if ($_POST[Activar3]) { 
+		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/3/activar.py");
+		echo $a;
+	}
+
+	if ($_POST[Desactivar3]) { 
+		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/3/apagar.py");
+		echo $a;
+	}
+
+	if ($_POST[UNparpadeo3]) { 
+		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/3/1parpadeo.py");
+		echo $a;
+	}
+
+	if ($_POST[Parpadear3]) { 
+		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/3/parpadear.py");
+		echo $a;
+	}
+// Fin de las funciónes del pin GPIO 3
 ?>
 	</HEAD>
 	
 	<BODY id="pines">
 		<H1>WEB DE CONTROL RaspberryPI</H1>
-		
+<FORM action="" method="post">		
 		<DIV id="cajamenuprincipal">
 			<NAV id="menuprincipal">
 				<UL>
@@ -58,12 +80,12 @@
 				<TD>2</TD>
 				<TD>
 					
-				<FORM action="" method="post">
+				
 					<INPUT type="submit" name="Activar2" value="Activar"/>
 					<INPUT type="submit" name="Desactivar2" value="Desactivar"/>
 					<INPUT type="submit" name="UNparpadeo2" value="1Parpadeo"/>
 					<INPUT type="submit" name="Parpadear2" value="Parpadear"/>
-				</FORM>
+				
 					
 				</TD>
 				<TD><IMG src="images/off.png" alt="Apagar"/></TD>
@@ -88,7 +110,7 @@
 				<TD></TD>
 			</TR>
 		</TABLE>
-		
+</FORM>
 	</BODY>
 </HTML>
 
