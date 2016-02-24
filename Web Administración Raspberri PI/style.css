@@ -47,26 +47,23 @@ BARRA DE MENÚ
 TABLA CONTROL GPIO
 ----------------------
 */
-#tablaprincipal {
-	min-width: 300px;
-	max-width: 900px;
+.tablaprincipal {
 	margin: auto;
-	padding: 10px;
+	padding: 0;
 	border: 5px groove black;
 	align-content: center;
 	align-items: center;
 	text-align: center;
 	vertical-align: middle;
 }
-#tablaprincipal TD {
-	padding: 5px;
+.tablaprincipal TD {
+	padding: 0;
 	border: 3px groove red;
 	font-size: 1.2em;
 	font-weight: bolder;
 }
-#tablaprincipal IMG {
-	width: 80px;
-	height: 80px;
+.tablaprincipal .pulsador:hover {
+	background-color: orange;
 }
 
 /*
@@ -75,16 +72,21 @@ INPUT
 ----------------------
 */
 .activar {
-	width: 100px;
-	height: 100px;
+	width: 25px;
+	height: 25px;
+	color: transparent;
 	background-color: transparent;
 	background-image: url(images/on.png);
 	border: none;
 }
 .desactivar {
-	width: 100px;
-	height: 100px;
+	width: 25px;
+	height: 25px;
+	color: transparent;
 	background-color: transparent;
 	background-image: url(images/off.png);
 	border: none;
+}
+.activar:hover, .desactivar:hover {
+	cursor: pointer;
 }
