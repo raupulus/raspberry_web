@@ -420,23 +420,23 @@
 // Fin de las funciónes del pin GPIO 20
 
 //Encender todos los pines
-if ($_POST[Parpadear20]) { 
+if ($_POST[todoON]) { 
 		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/activar.py");
 
 //Apagar todos los pines
-if ($_POST[Parpadear20]) { 
+if ($_POST[todoOFF]) { 
 		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/apagar.py");
 
 //Parpadear en orden todos los pines
-if ($_POST[Parpadear20]) { 
+if ($_POST[parpadeoORDEN]) { 
 		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoOrdenado.py");
 
 //Parpadear aleatorio todos los pines
-if ($_POST[Parpadear20]) { 
+if ($_POST[parpadeoALEATORIO]) { 
 		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoaleatorio.py");
 
 //Parpadear todos los pines a la vez
-if ($_POST[Parpadear20]) { 
+if ($_POST[parpadeoTODO]) { 
 		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoTodo.py");
 
 //La siguiente línea hará volver al index de nuevo tras haber tratado en esta hoja lo que hemos enviado por $_POST
