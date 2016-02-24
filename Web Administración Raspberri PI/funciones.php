@@ -420,24 +420,34 @@
 // Fin de las funciónes del pin GPIO 20
 
 //Encender todos los pines
-if ($_POST[todoON]) { 
-		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/activar.py");
+	if ($_POST[todoON]) { 
+			$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/activar.py");
+	echo $a;
+	}
 
 //Apagar todos los pines
-if ($_POST[todoOFF]) { 
-		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/apagar.py");
-
+	if ($_POST[todoOFF]) { 
+			$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/apagar.py");
+	echo $a;
+	}
+	
 //Parpadear en orden todos los pines
-if ($_POST[parpadeoORDEN]) { 
-		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoOrdenado.py");
+	if ($_POST[parpadeoORDEN]) { 
+			$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoOrdenado.py");
+	echo $a;
+	}
 
 //Parpadear aleatorio todos los pines
-if ($_POST[parpadeoALEATORIO]) { 
-		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoaleatorio.py");
+	if ($_POST[parpadeoALEATORIO]) { 
+			$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoaleatorio.py");
+	echo $a;
+	}
 
 //Parpadear todos los pines a la vez
-if ($_POST[parpadeoTODO]) { 
-		$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoTodo.py");
+	if ($_POST[parpadeoTODO]) { 
+			$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoTodo.py");
+	echo $a;
+		}
 
 //La siguiente línea hará volver al index de nuevo tras haber tratado en esta hoja lo que hemos enviado por $_POST
  header("Location: index.html");  
