@@ -39,7 +39,7 @@ GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
 
-#Asigno valor bajo para apagar
+#Asigno valor bajo para apagar todos
 GPIO.output(2, GPIO.LOW)
 GPIO.output(3, GPIO.LOW)
 GPIO.output(4, GPIO.LOW)
