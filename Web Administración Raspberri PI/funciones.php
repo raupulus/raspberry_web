@@ -439,7 +439,7 @@
 
 //Parpadear aleatorio todos los pines
 	if ($_POST[parpadeoALEATORIO]) { 
-			$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoaleatorio.py");
+			$a=exec("sudo python /var/www/webRaspberriPI/Web\ Administración\ Raspberri\ PI/GPIO/TODOS/parpadeoAleatorio.py");
 	echo $a;
 	}
 
