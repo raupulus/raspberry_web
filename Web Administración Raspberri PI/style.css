@@ -68,3 +68,23 @@ TABLA CONTROL GPIO
 	width: 80px;
 	height: 80px;
 }
+
+/*
+----------------------
+INPUT
+----------------------
+*/
+.activar {
+	width: 100px;
+	height: 100px;
+	background-color: transparent;
+	background-image: url(images/on.png);
+	border: none;
+}
+.desactivar {
+	width: 100px;
+	height: 100px;
+	background-color: transparent;
+	background-image: url(images/off.png);
+	border: none;
+}
