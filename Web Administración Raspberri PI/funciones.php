@@ -419,5 +419,6 @@
 	}
 // Fin de las funciónes del pin GPIO 20
 
- header("Location: index.php");  
+//La siguiente línea hará volver al index de nuevo tras haber tratado en esta hoja lo que hemos enviado por $_POST
+ header("Location: index.html");  
 ?>
