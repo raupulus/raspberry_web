@@ -67,6 +67,25 @@ BARRA DE MENÚ
 TABLA CONTROL GPIO
 ----------------------
 */
+.tablatodos {
+	margin: 10px auto;
+	padding: 0;
+	border: 5px groove black;
+	align-content: center;
+	align-items: center;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 7px 9px 5px black;
+	background-color: black;
+	border-radius: 10px;
+}
+.tablatodos TD, .tablatodos TH {
+	padding: 0 10px;
+	color: white;
+}
+.tablatodos TD {
+	
+}
 .tablaprincipal {
 	margin: auto;
 	padding: 0;
@@ -75,7 +94,9 @@ TABLA CONTROL GPIO
 	align-items: center;
 	text-align: center;
 	vertical-align: middle;
+	background-color: black;
 	box-shadow: 7px 9px 5px black;
+	border-radius: 10px;
 }
 .tablaprincipal TD {
 	margin: 0;
@@ -83,8 +104,8 @@ TABLA CONTROL GPIO
 	font-size: 1.2em;
 	font-weight: bolder;
 }
-.tablaprincipal TR {
-	
+.tablaprincipal TH {
+	padding: 0 3px;
 }
 .tablaprincipal .pulsador:hover {
 	background-color: orange;
