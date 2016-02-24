@@ -44,4 +44,6 @@
 		echo $a;
 	}
 // Fin de las funciónes del pin GPIO 3
+
+ header("Location: index.php");  
 ?>
