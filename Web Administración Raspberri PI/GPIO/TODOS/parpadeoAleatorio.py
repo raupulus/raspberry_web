@@ -3,18 +3,19 @@
 
 #Importar libreria GPIO
 import RPi.GPIO as GPIO
-
 #Definir modo de trabajo para la placa BCM 
 GPIO.setmode(GPIO.BCM)
-
 #Desactivo Errores
 GPIO.setwarnings(False)
-
 #Importamos la libreria time
 import time
-
 #Importamos la libreria para comandos de la consola/shell
 import os
+
+#Creamos variable para pausar
+sleep = time.sleep
+
+#Creamos array para usar sus valores de forma aleatoria
 
 #Definir GPIO como Salida
 GPIO.setup(2, GPIO.OUT)
@@ -39,25 +40,8 @@ GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
 
-#Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
-GPIO.output(2, GPIO.HIGH)
-GPIO.output(3, GPIO.HIGH)
-GPIO.output(4, GPIO.HIGH)
-GPIO.output(5, GPIO.HIGH)
-GPIO.output(6, GPIO.HIGH)
-GPIO.output(7, GPIO.HIGH)
-GPIO.output(8, GPIO.HIGH)
-GPIO.output(9, GPIO.HIGH)
-GPIO.output(10, GPIO.HIGH)
-GPIO.output(11, GPIO.HIGH)
-GPIO.output(12, GPIO.HIGH)
-GPIO.output(13, GPIO.HIGH)
-GPIO.output(14, GPIO.HIGH)
-GPIO.output(15, GPIO.HIGH)
-GPIO.output(16, GPIO.HIGH)
-GPIO.output(17, GPIO.HIGH)
-GPIO.output(18, GPIO.HIGH)
-GPIO.output(19, GPIO.HIGH)
-GPIO.output(20, GPIO.HIGH)
-GPIO.output(21, GPIO.HIGH)
-GPIO.output(22, GPIO.HIGH)
+#Bucle que activa de forma desordenada las salidas, máximo 3 a la vez y 5 veces
+# GPIO.setup($variabledelarray, GPIO.OUT)
+
+#Limpiar GPIO
+GPIO.cleanup()

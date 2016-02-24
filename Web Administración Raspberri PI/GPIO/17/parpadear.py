@@ -20,70 +20,70 @@ import os
 sleep = time.sleep
 
 #Definir GPIO como Salida
-GPIO.setup(4, GPIO.OUT)
+GPIO.setup(17, GPIO.OUT)
 
 #Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
-GPIO.output(4, GPIO.HIGH)
+GPIO.output(17, GPIO.HIGH)
 
 #Pausar 1 segundo
 sleep(1)
 
 #Detener salida
-GPIO.output(4, GPIO.LOW)
+GPIO.output(17, GPIO.LOW)
 
 #Pausar 1 segundo
 sleep(1)
 
 #Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
-GPIO.output(4, GPIO.HIGH)
+GPIO.output(17, GPIO.HIGH)
 
 #Pausar 1 segundo
 sleep(1)
 
 #Detener salida
-GPIO.output(4, GPIO.LOW)
+GPIO.output(17, GPIO.LOW)
 
 #Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
-GPIO.output(4, GPIO.HIGH)
+GPIO.output(17, GPIO.HIGH)
 
 #Pausar 1 segundo
 sleep(1)
 
 #Detener salida
-GPIO.output(4, GPIO.LOW)
-
-#Pausar 1 segundo
-sleep(1)
-
-#Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
-GPIO.output(4, GPIO.HIGH)
-
-#Pausar 1 segundo
-sleep(1)
-
-#Detener salida
-GPIO.output(4, GPIO.LOW)
-
-#Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
-GPIO.output(4, GPIO.HIGH)
-
-#Pausar 1 segundo
-sleep(1)
-
-#Detener salida
-GPIO.output(4, GPIO.LOW)
+GPIO.output(17, GPIO.LOW)
 
 #Pausar 1 segundo
 sleep(1)
 
 #Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
-GPIO.output(4, GPIO.HIGH)
+GPIO.output(17, GPIO.HIGH)
 
 #Pausar 1 segundo
 sleep(1)
 
 #Detener salida
-GPIO.output(4, GPIO.LOW)
+GPIO.output(17, GPIO.LOW)
+
+#Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
+GPIO.output(17, GPIO.HIGH)
+
+#Pausar 1 segundo
+sleep(1)
+
+#Detener salida
+GPIO.output(17, GPIO.LOW)
+
+#Pausar 1 segundo
+sleep(1)
+
+#Asigno valor alto para que tenga corriente la salida de 3,3v por GPIO
+GPIO.output(17, GPIO.HIGH)
+
+#Pausar 1 segundo
+sleep(1)
+
+#Detener salida
+GPIO.output(17, GPIO.LOW)
 
 #Limpiar GPIO
 GPIO.cleanup()
