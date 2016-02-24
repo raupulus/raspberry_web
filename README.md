@@ -28,3 +28,9 @@ Este script comprobará si existe instalación en la ruta correcta, en caso de n
 --------------FUTURO---------------
 -----------------------------------
 Los planes de futuro no están claros al 100% ya que estoy creando esta plataforma (en principio) según las necesidades que me van surgiendo para amenizar tareas.
+Las mejoras que si están claras:
+-Optimización de código repetitivo
+-Información en la web sobre el hardware como: temperatura, almacenamiento, ip conectadas...
+-Actualización desde la web
+
+
