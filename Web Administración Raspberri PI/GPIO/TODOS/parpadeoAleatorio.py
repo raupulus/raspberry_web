@@ -11,11 +11,18 @@ GPIO.setwarnings(False)
 import time
 #Importamos la libreria para comandos de la consola/shell
 import os
+#Importamos librería para número aleatorios
+import random
 
 #Creamos variable para pausar
 sleep = time.sleep
+#Creamos variable con número aleatorio entre 2 y 11
+aleatorio1 = random.randint(2, 11)
+aleatorio2 = random.randint(2, 11)
+aleatorio3 = random.randint(2, 11)
 
 #Creamos array para usar sus valores de forma aleatoria
+#aleatorio=array((2,3,4,5,6,7,8,9,10,11,12))
 
 #Definir GPIO como Salida
 GPIO.setup(2, GPIO.OUT)
@@ -42,6 +49,17 @@ GPIO.setup(22, GPIO.OUT)
 
 #Bucle que activa de forma desordenada las salidas, máximo 3 a la vez y 5 veces
 # GPIO.setup($variabledelarray, GPIO.OUT)
+i = 1
+while i <= 5:
+	print (GPIO.setup(aleatorio1, GPIO.OUT))
+	print aleatorio1
+	print aleatorio2
+	print aleatorio3
+	aleatorio1 = random.randint(2, 11)
+	aleatorio2 = random.randint(2, 11)
+	aleatorio3 = random.randint(2, 11)
+	i += 1
+print("Terminado")
 
 #Limpiar GPIO
 GPIO.cleanup()
