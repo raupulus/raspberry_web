@@ -17,7 +17,7 @@ import time
 #Importamos la libreria para comandos de la consola/shell
 import os
 
-#Ahora definimos Todos los pines del 2-11 como salida
+#Ahora definimos Todos los pines del 2-26 como salida
 GPIO.setup(2, GPIO.OUT)
 GPIO.setup(3, GPIO.OUT)
 GPIO.setup(4, GPIO.OUT)
@@ -28,6 +28,21 @@ GPIO.setup(8, GPIO.OUT)
 GPIO.setup(9, GPIO.OUT)
 GPIO.setup(10, GPIO.OUT)
 GPIO.setup(11, GPIO.OUT)
+GPIO.setup(12, GPIO.OUT)
+GPIO.setup(13, GPIO.OUT)
+GPIO.setup(14, GPIO.OUT)
+GPIO.setup(15, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
+GPIO.setup(17, GPIO.OUT)
+GPIO.setup(18, GPIO.OUT)
+GPIO.setup(19, GPIO.OUT)
+GPIO.setup(20, GPIO.OUT)
+GPIO.setup(21, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+GPIO.setup(24, GPIO.OUT)
+GPIO.setup(25, GPIO.OUT)
+GPIO.setup(26, GPIO.OUT)
 
 #Defino las variables
 tiempoensegundos = 8
@@ -50,16 +65,31 @@ def importarGPIO():
 	import time
 
 	#Ahora definimos Todos los pines del 2-11 como salida
-	GPIO.setup(2, GPIO.OUT)
-	GPIO.setup(3, GPIO.OUT)
-	GPIO.setup(4, GPIO.OUT)
-	GPIO.setup(5, GPIO.OUT)
-	GPIO.setup(6, GPIO.OUT)
-	GPIO.setup(7, GPIO.OUT)
-	GPIO.setup(8, GPIO.OUT)
-	GPIO.setup(9, GPIO.OUT)
-	GPIO.setup(10, GPIO.OUT)
-	GPIO.setup(11, GPIO.OUT)
+GPIO.setup(2, GPIO.OUT)
+GPIO.setup(3, GPIO.OUT)
+GPIO.setup(4, GPIO.OUT)
+GPIO.setup(5, GPIO.OUT)
+GPIO.setup(6, GPIO.OUT)
+GPIO.setup(7, GPIO.OUT)
+GPIO.setup(8, GPIO.OUT)
+GPIO.setup(9, GPIO.OUT)
+GPIO.setup(10, GPIO.OUT)
+GPIO.setup(11, GPIO.OUT)
+GPIO.setup(12, GPIO.OUT)
+GPIO.setup(13, GPIO.OUT)
+GPIO.setup(14, GPIO.OUT)
+GPIO.setup(15, GPIO.OUT)
+GPIO.setup(16, GPIO.OUT)
+GPIO.setup(17, GPIO.OUT)
+GPIO.setup(18, GPIO.OUT)
+GPIO.setup(19, GPIO.OUT)
+GPIO.setup(20, GPIO.OUT)
+GPIO.setup(21, GPIO.OUT)
+GPIO.setup(22, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+GPIO.setup(24, GPIO.OUT)
+GPIO.setup(25, GPIO.OUT)
+GPIO.setup(26, GPIO.OUT)
 
 	#Importamos la libreria para comandos de la consola/shell
 	import os
@@ -251,6 +281,21 @@ def lucesfijas():
 	GPIO.output(9, GPIO.HIGH)
 	GPIO.output(10, GPIO.HIGH)
 	GPIO.output(11, GPIO.HIGH)
+	GPIO.output(12, GPIO.HIGH)
+	GPIO.output(13, GPIO.HIGH)
+	GPIO.output(14, GPIO.HIGH)
+	GPIO.output(15, GPIO.HIGH)
+	GPIO.output(16, GPIO.HIGH)
+	GPIO.output(17, GPIO.HIGH)
+	GPIO.output(18, GPIO.HIGH)
+	GPIO.output(19, GPIO.HIGH)
+	GPIO.output(20, GPIO.HIGH)
+	GPIO.output(21, GPIO.HIGH)
+	GPIO.output(22, GPIO.HIGH)
+	GPIO.output(23, GPIO.HIGH)
+	GPIO.output(24, GPIO.HIGH)
+	GPIO.output(25, GPIO.HIGH)
+	GPIO.output(26, GPIO.HIGH)
 
 # -------------------------------------- SELECCIONAR LED A ENCENDER ----------------------------------
 def seleccionargpioaencender():
@@ -281,7 +326,6 @@ def seleccionargpioaencender():
 			GPIO.output(5, GPIO.HIGH)
 
 		elif seleccionGPIO == 6:
-			print "prueba de que llega hasta aquí"
 			GPIO.output(6, GPIO.HIGH)
 
 		elif seleccionGPIO == 7:
@@ -298,9 +342,56 @@ def seleccionargpioaencender():
 
 		elif seleccionGPIO == 11:
 			GPIO.output(11, GPIO.HIGH)
-
+			
+		elif seleccionGPIO == 12:
+			GPIO.output(12, GPIO.HIGH)
+			
+		elif seleccionGPIO == 13:
+			GPIO.output(13, GPIO.HIGH)
+			
+		elif seleccionGPIO == 14:
+			GPIO.output(14, GPIO.HIGH)
+			
+		elif seleccionGPIO == 15:
+			GPIO.output(15, GPIO.HIGH)
+			
+		elif seleccionGPIO == 16:
+			GPIO.output(16, GPIO.HIGH)
+			
+		elif seleccionGPIO == 17:
+			GPIO.output(17, GPIO.HIGH)
+			
+		elif seleccionGPIO == 18:
+			GPIO.output(18, GPIO.HIGH)
+			
+		elif seleccionGPIO == 19:
+			GPIO.output(19, GPIO.HIGH)
+			
+		elif seleccionGPIO == 20:
+			GPIO.output(20, GPIO.HIGH)
+			
+		elif seleccionGPIO == 21:
+			GPIO.output(21, GPIO.HIGH)
+			
+		elif seleccionGPIO == 22:
+			GPIO.output(22, GPIO.HIGH)
+			
+		elif seleccionGPIO == 23:
+			GPIO.output(23, GPIO.HIGH)
+			
+		elif seleccionGPIO == 24:
+			GPIO.output(24, GPIO.HIGH)
+			
+		elif seleccionGPIO == 25:
+			GPIO.output(25, GPIO.HIGH)
+			
+		elif seleccionGPIO == 26:
+			GPIO.output(26, GPIO.HIGH)
+			
+		elif seleccionGPIO == 27:
+			GPIO.output(27, GPIO.HIGH)
 		else:
-			print "Esta opción es incorrecta, selecciona un número del 1 al 6"
+			print "Esta opción es incorrecta, selecciona un número del 2 al 27"
 
 		"""
 		nombreled = seleccionGPIO + ", GPIO.HIGH"
