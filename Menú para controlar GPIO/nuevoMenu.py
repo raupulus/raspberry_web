@@ -14,6 +14,7 @@ def inicializacion():
 	#Variables
 	tiempoensegundos = 8
 	sleep = time.sleep
+
 inicializacion()
 
 #Función para activar todos como salida
@@ -115,32 +116,28 @@ Elige una opción:
 
 	opcion=input("-->")
 	if opcion == 1:
-		inicializacion()
-		GPIO.cleanup()
+		#GPIO.cleanup()
 		todosSalida()
 		todosHIGH()
 
 	elif opcion == 2:
-		inicializacion()
-		GPIO.cleanup()
+		#GPIO.cleanup()
 		todosSalida()
 		aleatorio()
 
 	elif opcion == 3:
-		inicializacion()
-		GPIO.cleanup()
+		#GPIO.cleanup()
 		seleccionarGPIOaEncender()
 
 	elif opcion == 4:
-		inicializacion()
-		GPIO.cleanup()
+		#GPIO.cleanup()
 		seleccionarGPIOaApagar()
 
 	elif opcion == 5:
-		inicializacion()
 		GPIO.cleanup()
 		todosSalida()
 		todosLOW()
+		GPIO.cleanup()
 
 	elif opcion == 6:
 		break
