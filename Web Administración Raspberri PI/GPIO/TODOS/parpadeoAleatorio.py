@@ -17,9 +17,14 @@ import random
 #Creamos variable para pausar
 sleep = time.sleep
 #Creamos variable con número aleatorio entre 2 y 11
-aleatorio1 = random.randint(2, 11)
-aleatorio2 = random.randint(2, 11)
-aleatorio3 = random.randint(2, 11)
+aleatorio1 = random.randint(2, 28)
+aleatorio2 = random.randint(2, 28)
+aleatorio3 = random.randint(2, 28)
+aleatorio4 = random.randint(2, 28)
+aleatorio5 = random.randint(2, 28)
+aleatorio6 = random.randint(2, 28)
+aleatorio7 = random.randint(2, 28)
+aleatorio8 = random.randint(2, 28)
 
 #Creamos array para usar sus valores de forma aleatoria
 #aleatorio=array((2,3,4,5,6,7,8,9,10,11,12))
@@ -46,6 +51,11 @@ GPIO.setup(19, GPIO.OUT)
 GPIO.setup(20, GPIO.OUT)
 GPIO.setup(21, GPIO.OUT)
 GPIO.setup(22, GPIO.OUT)
+GPIO.setup(23, GPIO.OUT)
+GPIO.setup(24, GPIO.OUT)
+GPIO.setup(25, GPIO.OUT)
+GPIO.setup(26, GPIO.OUT)
+GPIO.setup(27, GPIO.OUT)
 
 #Asigno valor bajo para apagar todos
 GPIO.output(2, GPIO.LOW)
@@ -69,11 +79,16 @@ GPIO.output(19, GPIO.LOW)
 GPIO.output(20, GPIO.LOW)
 GPIO.output(21, GPIO.LOW)
 GPIO.output(22, GPIO.LOW)
+GPIO.output(23, GPIO.LOW)
+GPIO.output(24, GPIO.LOW)
+GPIO.output(25, GPIO.LOW)
+GPIO.output(26, GPIO.LOW)
+GPIO.output(27, GPIO.LOW)
 
 #Bucle que activa de forma desordenada las salidas, máximo 3 a la vez y 10 veces
 # GPIO.setup($variabledelarray, GPIO.OUT)
 i = 1
-while i <= 10:
+while i <= 20:
         GPIO.output( aleatorio1, GPIO.HIGH)
         GPIO.output( aleatorio2, GPIO.HIGH)
         GPIO.output( aleatorio3, GPIO.HIGH)
@@ -84,9 +99,14 @@ while i <= 10:
         print aleatorio1
         print aleatorio2
         print aleatorio3
-        aleatorio1 = random.randint(2, 11)
-        aleatorio2 = random.randint(2, 11)
-        aleatorio3 = random.randint(2, 11)
+        aleatorio1 = random.randint(2, 28)
+				aleatorio2 = random.randint(2, 28)
+				aleatorio3 = random.randint(2, 28)
+				aleatorio4 = random.randint(2, 28)
+				aleatorio5 = random.randint(2, 28)
+				aleatorio6 = random.randint(2, 28)
+				aleatorio7 = random.randint(2, 28)
+				aleatorio8 = random.randint(2, 28)
         sleep(1)
         i += 1
 print("Terminado")
