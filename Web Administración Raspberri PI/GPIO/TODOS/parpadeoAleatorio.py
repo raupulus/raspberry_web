@@ -89,26 +89,26 @@ GPIO.output(27, GPIO.LOW)
 # GPIO.setup($variabledelarray, GPIO.OUT)
 i = 1
 while i <= 20:
-        GPIO.output( aleatorio1, GPIO.HIGH)
-        GPIO.output( aleatorio2, GPIO.HIGH)
-        GPIO.output( aleatorio3, GPIO.HIGH)
-        sleep(1)
-        GPIO.output( aleatorio1, GPIO.LOW)
-        GPIO.output( aleatorio2, GPIO.LOW)
-        GPIO.output( aleatorio3, GPIO.LOW)
-        print aleatorio1
-        print aleatorio2
-        print aleatorio3
-        aleatorio1 = random.randint(2, 28)
-				aleatorio2 = random.randint(2, 28)
-				aleatorio3 = random.randint(2, 28)
-				aleatorio4 = random.randint(2, 28)
-				aleatorio5 = random.randint(2, 28)
-				aleatorio6 = random.randint(2, 28)
-				aleatorio7 = random.randint(2, 28)
-				aleatorio8 = random.randint(2, 28)
-        sleep(1)
-        i += 1
+	GPIO.output( aleatorio1, GPIO.HIGH)
+	GPIO.output( aleatorio2, GPIO.HIGH)
+	GPIO.output( aleatorio3, GPIO.HIGH)
+	sleep(1)
+	GPIO.output( aleatorio1, GPIO.LOW)
+	GPIO.output( aleatorio2, GPIO.LOW)
+	GPIO.output( aleatorio3, GPIO.LOW)
+	print aleatorio1
+	print aleatorio2
+	print aleatorio3
+	aleatorio1 = random.randint(2, 28)
+	aleatorio2 = random.randint(2, 28)
+	aleatorio3 = random.randint(2, 28)
+	aleatorio4 = random.randint(2, 28)
+	aleatorio5 = random.randint(2, 28)
+	aleatorio6 = random.randint(2, 28)
+	aleatorio7 = random.randint(2, 28)
+	aleatorio8 = random.randint(2, 28)
+	sleep(1)
+	i += 1
 print("Terminado")
 
 #Limpiar GPIO
