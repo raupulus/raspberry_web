@@ -1,23 +1,20 @@
 #!/usr/bin/python
 # -*- encoding: utf-8 -*-
 
-###Indice del menu
-#importamos la libreria GPIO
-import RPi.GPIO as GPIO
+#Importamos Librerías
+import RPi.GPIO as GPIO #Librerías GPIO
+import time #Importamos la libreria time
+import os #Importamos la libreria para comandos de la consola/shell
 
-#Definimos el modo BCM
-GPIO.setmode(GPIO.BCM)
+#Modo de tratar con GPIO
+GPIO.setmode(GPIO.BCM) #Definimos el modo BCM
+GPIO.setwarnings(False) #Desactivo Errores
 
-#Desactivo Errores
-GPIO.setwarnings(False)
+#Variables
+tiempoensegundos = 8
+sleep = time.sleep
 
-#Importamos la libreria time
-import time
-
-#Importamos la libreria para comandos de la consola/shell
-import os
-
-#Ahora definimos Todos los pines del 2-26 como salida
+#Ahora definimos Todos los pines del 2-27 como salida
 GPIO.setup(2, GPIO.OUT)
 GPIO.setup(3, GPIO.OUT)
 GPIO.setup(4, GPIO.OUT)
@@ -43,10 +40,8 @@ GPIO.setup(23, GPIO.OUT)
 GPIO.setup(24, GPIO.OUT)
 GPIO.setup(25, GPIO.OUT)
 GPIO.setup(26, GPIO.OUT)
+GPIO.setup(27, GPIO.OUT)
 
-#Defino las variables
-tiempoensegundos = 8
-sleep = time.sleep
 
 #Creo la función para salir de todo y desactivar correctamente los GPIO
 
@@ -91,24 +86,18 @@ GPIO.setup(24, GPIO.OUT)
 GPIO.setup(25, GPIO.OUT)
 GPIO.setup(26, GPIO.OUT)
 
-	#Importamos la libreria para comandos de la consola/shell
-	import os
+#Importamos la libreria para comandos de la consola/shell
+import os
 
 def limpiarled():
 	print("Desactivando todos los GPIO y limpiando sistema")
-
-	#os.system("espeak -ves 'Bueno, si te has cansado de esto me voy. Adios'")
-
 	sleep(2)
 	GPIO.cleanup()
-	sleep(3)
+	sleep(1)
 	exit
 
 def lucesaleatorias_a():
 	importarGPIO()
-
-	#os.system("espeak -ves 'Hola, estoy encendiendo las luces de forma aleatoria nivel 1'")
-
 	GPIO.output(2, GPIO.HIGH)
 	GPIO.output(3, GPIO.HIGH)
 	sleep(2)
@@ -142,8 +131,6 @@ def lucesaleatorias_a():
 
 def lucesaleatorias_b():
 	importarGPIO()
-	#os.system("espeak -ves 'Hola, estoy encendiendo las luces de forma aleatoria nivel 2'")
-
 	GPIO.output(2, GPIO.HIGH)
 	GPIO.output(3, GPIO.HIGH)
 	GPIO.output(4, GPIO.HIGH)
@@ -269,8 +256,6 @@ def lucesaleatorias_b():
 
 def lucesfijas():
 	importarGPIO()
-	#os.system("espeak -ves 'Hola, estoy encendiendo las luces de forma fija'")
-
 	GPIO.output(2, GPIO.HIGH)
 	GPIO.output(3, GPIO.HIGH)
 	GPIO.output(4, GPIO.HIGH)
@@ -296,13 +281,13 @@ def lucesfijas():
 	GPIO.output(24, GPIO.HIGH)
 	GPIO.output(25, GPIO.HIGH)
 	GPIO.output(26, GPIO.HIGH)
+	GPIO.output(27, GPIO.HIGH)
 
 # -------------------------------------- SELECCIONAR LED A ENCENDER ----------------------------------
 def seleccionargpioaencender():
 	GPIO.cleanup()
 	importarGPIO()
 	GPIO.setmode(GPIO.BCM)
-	#os.system("espeak -ves 'Introduce el número de LED'")
 
 	while True:
 		print """
