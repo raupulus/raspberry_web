@@ -22,7 +22,7 @@ def todosSalida():
 		GPIO.setup(contador, GPIO.OUT)
 		contador =  contador + 1
 
-#todosSalida()
+todosSalida()
 
 #TodosLOW
 def todosLOW():
@@ -48,7 +48,6 @@ def seleccionarGPIOaEncender():
 			"""
 		seleccionGPIO=input("-->")
 		if seleccionGPIO >= 2 & seleccionGPIO <=27:
-			GPIO.setup(seleccionGPIO, GPIO.OUT)
 			GPIO.output(seleccionGPIO, GPIO.HIGH)
 			break
 		else:
@@ -64,7 +63,6 @@ def seleccionarGPIOaApagar():
 			"""
 		seleccionGPIO=input("-->")
 		if seleccionGPIO >= 2 & seleccionGPIO <=27:
-			GPIO.setup(seleccionGPIO, GPIO.OUT)
 			GPIO.output(seleccionGPIO, GPIO.LOW)
 			break
 		else:
@@ -113,12 +111,10 @@ Elige una opción:
 	opcion=input("-->")
 	if opcion == 1:
 		#GPIO.cleanup()
-		todosSalida()
 		todosHIGH()
 
 	elif opcion == 2:
 		#GPIO.cleanup()
-		todosSalida()
 		aleatorio()
 
 	elif opcion == 3:
@@ -131,7 +127,6 @@ Elige una opción:
 
 	elif opcion == 5:
 		GPIO.cleanup()
-		todosSalida()
 		todosLOW()
 		GPIO.cleanup()
 
