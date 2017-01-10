@@ -1,21 +1,19 @@
 #!/usr/bin/python
 # -*- encoding: utf-8 -*-
-def inicializacion():
-	#Importamos Librerías
-	import RPi.GPIO as GPIO #Librerías GPIO
-	import time #Importamos la libreria time
-	import os #Importamos la libreria para comandos de la consola/shell
-	import random #crea números aleatorios
-	
-	#Modo de tratar con GPIO
-	GPIO.setmode(GPIO.BCM) #Definimos el modo BCM
-	GPIO.setwarnings(False) #Desactivo Errores
 
-	#Variables
-	tiempoensegundos = 8
-	sleep = time.sleep
+#Importamos Librerías
+import RPi.GPIO as GPIO #Librerías GPIO
+import time #Importamos la libreria time
+import os #Importamos la libreria para comandos de la consola/shell
+import random #crea números aleatorios
 
-inicializacion()
+#Modo de tratar con GPIO
+GPIO.setmode(GPIO.BCM) #Definimos el modo BCM
+GPIO.setwarnings(False) #Desactivo Errores
+
+#Variables
+tiempoensegundos = 8
+sleep = time.sleep
 
 #Función para activar todos como salida
 def todosSalida():
@@ -50,7 +48,6 @@ def seleccionarGPIOaEncender():
 			"""
 		seleccionGPIO=input("-->")
 		if seleccionGPIO >= 2 & seleccionGPIO <=27:
-			inicializacion()
 			GPIO.setup(seleccionGPIO, GPIO.OUT)
 			GPIO.output(seleccionGPIO, GPIO.HIGH)
 			break
@@ -67,7 +64,6 @@ def seleccionarGPIOaApagar():
 			"""
 		seleccionGPIO=input("-->")
 		if seleccionGPIO >= 2 & seleccionGPIO <=27:
-			inicializacion()
 			GPIO.setup(seleccionGPIO, GPIO.OUT)
 			GPIO.output(seleccionGPIO, GPIO.LOW)
 			break
