@@ -14,7 +14,7 @@ def inicializacion():
 	#Variables
 	tiempoensegundos = 8
 	sleep = time.sleep
-
+inicializacion()
 
 #Función para activar todos como salida
 def todosSalida():
