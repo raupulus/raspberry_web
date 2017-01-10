@@ -115,33 +115,35 @@ Elige una opción:
 
 	opcion=input("-->")
 	if opcion == 1:
-		GPIO.cleanup()
 		inicializacion()
+		GPIO.cleanup()
 		todosSalida()
 		todosHIGH()
 
 	elif opcion == 2:
-		GPIO.cleanup()
 		inicializacion()
+		GPIO.cleanup()
 		todosSalida()
 		aleatorio()
 
 	elif opcion == 3:
+		inicializacion()
 		GPIO.cleanup()
 		seleccionarGPIOaEncender()
 
 	elif opcion == 4:
+		inicializacion()
 		GPIO.cleanup()
 		seleccionarGPIOaApagar()
 
 	elif opcion == 5:
-		GPIO.cleanup()
 		inicializacion()
+		GPIO.cleanup()
 		todosSalida()
 		todosLOW()
 
 	elif opcion == 6:
-		exit
+		break
 	else:
 		print "Esta opción es incorrecta, selecciona un número del 1 al 6"
 		
