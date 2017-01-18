@@ -76,6 +76,53 @@ def seleccionarGPIOaApagar():
 								
 						"""
 
+def aleatorio():
+	while True:
+		GPIOaleatorio = random.randrange(2,27)
+		GPIOaleatorio1 = random.randrange(2,27)
+		GPIOaleatorio2 = random.randrange(2,27)
+		GPIOaleatorio3 = random.randrange(2,27)
+		GPIOaleatorio4 = random.randrange(2,27)
+		GPIOaleatorio5 = random.randrange(2,27)
+		GPIOaleatorio6 = random.randrange(2,27)
+
+		if (GPIO.input(GPIOaleatorio) == GPIO.HIGH):
+			GPIO.output(GPIOaleatorio, GPIO.LOW)
+		else:
+			GPIO.output(GPIOaleatorio, GPIO.HIGH)
+
+		if (GPIO.input(GPIOaleatorio1) == GPIO.HIGH):
+			GPIO.output(GPIOaleatorio1, GPIO.LOW)
+		else:
+			GPIO.output(GPIOaleatorio1, GPIO.HIGH)
+
+		if (GPIO.input(GPIOaleatorio2) == GPIO.HIGH):
+			GPIO.output(GPIOaleatorio2, GPIO.LOW)
+		else:
+			GPIO.output(GPIOaleatorio2, GPIO.HIGH)
+
+		if (GPIO.input(GPIOaleatorio3) == GPIO.HIGH):
+			GPIO.output(GPIOaleatorio3, GPIO.LOW)
+		else:
+			GPIO.output(GPIOaleatorio3, GPIO.HIGH)
+
+		if (GPIO.input(GPIOaleatorio4) == GPIO.HIGH):
+			GPIO.output(GPIOaleatorio4, GPIO.LOW)
+		else:
+			GPIO.output(GPIOaleatorio4, GPIO.HIGH)
+
+		if (GPIO.input(GPIOaleatorio5) == GPIO.HIGH):
+			GPIO.output(GPIOaleatorio5, GPIO.LOW)
+		else:
+			GPIO.output(GPIOaleatorio5, GPIO.HIGH)
+
+		if (GPIO.input(GPIOaleatorio6) == GPIO.HIGH):
+			GPIO.output(GPIOaleatorio6, GPIO.LOW)
+		else:
+			GPIO.output(GPIOaleatorio6, GPIO.HIGH)
+
+		sleep(0.4)
+
 def limpiar():
 	GPIO.cleanup()
 
@@ -92,8 +139,9 @@ Elige una opción:
 3 Apagar todos los GPIO 2-27
 4 Seleccionar GPIO para activar  >X (no funciona)
 5 Seleccionar GPIO para apagar   >X (no funciona)
-6 Limpiar
-7 Salir 
+6 Aleatorios encendidos y apagadados
+7 Limpiar
+8 Salir 
 """
 
 	opcion=input("-->")
@@ -115,9 +163,13 @@ Elige una opción:
 		seleccionarGPIOaApagar()
 
 	elif opcion == 6:
-		limpiar()
+		MarcarSalida()
+		aleatorio()
 
 	elif opcion == 7:
+		limpiar()
+
+	elif opcion == 8:
 		break
 	else:
 		print "Esta opción es incorrecta, selecciona un número del 1 al 4"
