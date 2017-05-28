@@ -9,6 +9,12 @@ LOG="/tmp/all_wlan_monitor.log"
 #Mostrar Redes
 echo "Redes detectadas:"
 
+function actualizarRedes() {
+	echo "Actualizando redes"
+	REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan`
+	NUM_REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan | wc -l`
+}
+
 #Bucle para configurar cada red en modo monitor
 for i in $REDES; do
 	#ifconfig $i
