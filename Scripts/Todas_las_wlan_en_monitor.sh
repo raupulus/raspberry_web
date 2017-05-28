@@ -6,7 +6,7 @@ NUM_REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan | wc -l`
 MONITOR=`ls  /sys/class/net/ | tr -s " " | grep mon | wc -l`
 NUM_MONITOR=`ls  /sys/class/net/ | tr -s " " | grep mon | wc -l`
 
-MACS=`ifconfig | tr -s " " | grep "wlan" | grep "HWaddr" | cut -d " " -f 5`
+MACS=`ifconfig -a | tr -s " " | grep "wlan" | grep "HWaddr" | cut -d " " -f 5`
 LOG="/tmp/all_wlan_monitor.log"
 
 #Mostrar Redes
@@ -16,13 +16,17 @@ function actualizarRedes() {
 	echo "Actualizando redes"
 	REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan`
 	NUM_REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan | wc -l`
-	MACS=`ifconfig | tr -s " " | grep "wlan" | grep "HWaddr" | cut -d " " -f 5`
+	MACS=`ifconfig -a | tr -s " " | grep "wlan" | grep "HWaddr" | cut -d " " -f 5`
 }
 
 #Bucle para configurar cada red en modo monitor
 for i in $REDES; do
-	#ifconfig $i
-
+	#airmon-ng start $i
+	ifconfig $i down
+	macchanger -a $i
+	iwconfig mode monitor
+	macchanger -a $i
+	ifconfig $i up
 	echo "$i"
 done
 
