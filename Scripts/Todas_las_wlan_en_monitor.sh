@@ -3,7 +3,10 @@
 #Ver dispositivos de red en el equipo
 REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan`
 NUM_REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan | wc -l`
-MACS=""
+MONITOR=`ls  /sys/class/net/ | tr -s " " | grep mon | wc -l`
+NUM_MONITOR=`ls  /sys/class/net/ | tr -s " " | grep mon | wc -l`
+
+MACS=`ifconfig | tr -s " " | grep "wlan" | grep "HWaddr" | cut -d " " -f 5`
 LOG="/tmp/all_wlan_monitor.log"
 
 #Mostrar Redes
@@ -13,6 +16,7 @@ function actualizarRedes() {
 	echo "Actualizando redes"
 	REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan`
 	NUM_REDES=`ls  /sys/class/net/ | tr -s " " | grep wlan | wc -l`
+	MACS=`ifconfig | tr -s " " | grep "wlan" | grep "HWaddr" | cut -d " " -f 5`
 }
 
 #Bucle para configurar cada red en modo monitor
