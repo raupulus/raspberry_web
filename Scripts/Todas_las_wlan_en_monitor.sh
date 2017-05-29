@@ -25,7 +25,8 @@ for i in $REDES; do
 	ifconfig $i down
 	macchanger -a $i
 	iwconfig mode monitor
-	macchanger -a $i
+	#Asignar la mac en modo monitor igual que la anterior
+	#macchanger -a $i
 	ifconfig $i up
 	echo "$i"
 done
