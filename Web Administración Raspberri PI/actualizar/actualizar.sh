@@ -40,17 +40,17 @@ resaltar="\E[7m"
 clear;
 ###Entrando o creando el directorio donde se instalará o actualizará /var/www
 if [ -d "/var/www/webRaspberriPI" ]
-	then
-		echo "Entrando al directorio /var/www/webRaspberriPI"
-		cd /var/www/webRaspberriPI
-		sleep 1
-		clear
-	else
-		echo -e "Creando el directorio que no existe /var/www/webRaspberriPI"
-		mkdir /var/www/webRaspberriPI
-		sleep 1
-		echo -e "Entrando al directorio cd /var/www/webRaspberriPI"
-		cd /var/www/webRaspberriPI
+    then
+        echo "Entrando al directorio /var/www/webRaspberriPI"
+        cd /var/www/webRaspberriPI
+        sleep 1
+        clear
+    else
+        echo -e "Creando el directorio que no existe /var/www/webRaspberriPI"
+        mkdir /var/www/webRaspberriPI
+        sleep 1
+        echo -e "Entrando al directorio cd /var/www/webRaspberriPI"
+        cd /var/www/webRaspberriPI
 fi
 
 
@@ -61,24 +61,24 @@ echo ""
 echo -e "$verdeC        Descargando contenido$grisC"
 #Condicional if: -d para comprobar si existe dir y -f para archivos -x permisos de ejecución
 if [ -d ".git" ]
-	then
-		echo -e "$rojoC El repositorio git si está inicializado$grisC"
-		git add *
-		git commit -a -m "auto dev server commit"
-		git fetch origin master
-		git merge -s recursive -X theirs origin/master
-		clear
-		git pull origin master
-	else
-		echo -e "$rojoC .git No existe$grisC"
-		git init
-		git remote add origin https://github.com/fryntiz/Raspberry-PI
-		git add *
-		git commit -a -m "auto dev server commit"
-		git fetch origin master
-		git merge -s recursive -X theirs origin/master
-		clear
-		git pull origin master
+    then
+        echo -e "$rojoC El repositorio git si está inicializado$grisC"
+        git add *
+        git commit -a -m "auto dev server commit"
+        git fetch origin master
+        git merge -s recursive -X theirs origin/master
+        clear
+        git pull origin master
+    else
+        echo -e "$rojoC .git No existe$grisC"
+        git init
+        git remote add origin https://github.com/fryntiz/Raspberry-PI
+        git add *
+        git commit -a -m "auto dev server commit"
+        git fetch origin master
+        git merge -s recursive -X theirs origin/master
+        clear
+        git pull origin master
 fi
 
 clear
