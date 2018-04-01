@@ -1,38 +1,42 @@
-/NOTAS.txt
-/test.sh
-test.sh
-/Backups/*
-Backups/*
-/logs/*
-logs/*
-/conf/home/.vim/colors/monokai_1.vim
-conf/home/.vim/colors/monokai_1.vim
-/conf/home/.vim/colors/wombat.vim
-conf/home/.vim/colors/wombat.vim
-/conf/home/.vim/bundle/*
-conf/home/.vim/bundle/*
-/conf/home/.vim/sessions/*
-conf/home/.vim/sessions/*
-errores.log
-/errores.log
-/conf/home/.atom/Diccionarios
-/conf/home/.vim/UltiSnips
-/conf/home/.vim/after
-/conf/home/.vim/autoload
-/conf/home/.vim/doc
-/conf/home/.vim/etc
-/conf/home/.vim/ftplugin
-/conf/home/.vim/indent
-/conf/home/.vim/initialize.py
-/conf/home/.vim/jedi_vim.py
-/conf/home/.vim/macros
-/conf/home/.vim/plugin
-/conf/home/.vim/pythonx
-/conf/home/.vim/samples
-/conf/home/.vim/scripts
-/conf/home/.vim/snippets
-/conf/home/.vim/spec
-/conf/home/.vim/syntax_checkers
-/conf/home/.vim/test
-/.idea
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+tests/_output/*
+tests/_support/_generated
+tests/chromedriver
+
+#vagrant folder
+/.vagrant
+
+# codesniffer cache
+.php_cs.cache
+
+# local environment variables
+.env
+
 /.ropeproject
