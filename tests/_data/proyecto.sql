@@ -1,1 +1,0 @@
-../../db/proyecto.sql

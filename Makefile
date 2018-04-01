@@ -1,5 +1,5 @@
 .PHONY: all test tests cs codecept pre_codecept post_codecept run_codecept \
-	fastcs fast phpcs docs api doc-src guide guia doc-src install psql clean
+	fastcs fast phpcs docs api doc-src guide guia doc-src install db psql clean
 
 all: test
 
@@ -40,6 +40,10 @@ serve:
 install:
 	composer install
 	composer run-script post-create-project-cmd
+
+db:
+	db/create.sh
+	db/load.sh
 
 psql:
 	db/psql.sh

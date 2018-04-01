@@ -15,10 +15,10 @@ modules:
             cleanup: false
     enabled:
         - Db:
-            dsn: 'pgsql:host=localhost;dbname=plantilla_test'
-            user: 'plantilla'
-            password: 'plantilla'
-            dump: 'tests/_data/plantilla.sql'
+            dsn: 'pgsql:host=localhost;dbname=raspberry_web_test'
+            user: 'raspberry_web'
+            password: 'raspberry_web'
+            dump: 'tests/_data/raspberry_web.sql'
             populate: true ## run populator before all tests
             cleanup: true ## run populator before each test
             populator: 'psql -U $user -h $host -d $dbname < $dump'

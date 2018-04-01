@@ -22,9 +22,9 @@ if (($url = getenv('DATABASE_URL')) !== false) {
     // Configuración para entorno local:
     $host = 'localhost';
     $port = '5432';
-    $dbname = 'plantilla';
-    $username = 'plantilla';
-    $password = 'plantilla';
+    $dbname = 'raspberry_web';
+    $username = 'raspberry_web';
+    $password = 'raspberry_web';
     $extra = [];
 }
 
