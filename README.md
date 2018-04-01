@@ -27,7 +27,7 @@ del autor: fryntiz (Raúl Caro Pastorino).
 -   Información en la web sobre el hardware (temperatura, almacenamiento...)
 -   Actualización desde la web
 
-## INSTALACIÓN
+## Instalación
 
 Clonar este repositorio en el servidor apache y apuntar al directorio web.
 Puedes obtener más información en el sitio Oficial de Yii2 framework.
