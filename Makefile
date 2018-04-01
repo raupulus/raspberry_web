@@ -49,6 +49,6 @@ psql:
 	db/psql.sh
 
 clean:
-	find 'runtime' -not -path 'runtime' -not -name ".gitignore" -exec rm -Rf {} \;
-	find 'web/assets' -not -path 'web/assets' -not -name ".gitignore" -exec rm -Rf {} \;
-	find 'web/tmp' -not -path 'web/tmp' -not -name ".gitignore" -exec rm -Rf {} \;
+	find 'runtime' -not -path 'runtime' -not -name ".gitignore" -exec rm -Rf {} \; || echo ''
+	find 'web/assets' -not -path 'web/assets' -not -name ".gitignore" -exec rm -Rf {} \; || echo ''
+	find 'web/tmp' -not -path 'web/tmp' -not -name ".gitignore" -exec rm -Rf {} \; || echo ''
