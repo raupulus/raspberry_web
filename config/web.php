@@ -4,6 +4,9 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 $log = require __DIR__ . '/log.php';
 
+/* Defino el nombre del tema actual en uso */
+$tema = 'rpihacker';
+
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
@@ -14,6 +17,13 @@ $config = [
     ],
     'language' => 'es-ES',
     'components' => [
+        'view' => [
+            'theme' => [
+                'basePath' => '@app/themes/'.$tema,
+                'baseUrl' => '@web/themes/'.$tema,
+                'pathMap' => ['@app/views' => '@app/themes/'.$tema],
+            ]
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'BqpECqhlh9srq_KPpeMaHtv3vA1EbeWX',
@@ -60,7 +70,6 @@ $config = [
         ],
         */
     ],
-    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {
