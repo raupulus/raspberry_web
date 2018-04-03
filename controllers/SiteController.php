@@ -55,13 +55,22 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Muestra el index, la página de inicio.
      *
      * @return string
      */
     public function actionIndex()
     {
         return $this->render('index');
+    }
+
+    /**
+     * Muestra el menú de selección para gestionar pines GPIO
+     * @return string
+     */
+    public function actionGpio()
+    {
+        return $this->render('gpio');
     }
 
     /**

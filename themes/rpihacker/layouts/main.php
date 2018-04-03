@@ -3,8 +3,6 @@
 use yii\widgets\Menu;
 use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -63,9 +61,10 @@ AppAsset::register($this);
                       "class" => "nav navbar-nav"
                     ],
                     'items' => [
-                        ['label' => 'Home', 'url' => ['site/index']],
+                        ['label' => 'Inicio', 'url' => ['site/index']],
+                        ['label' => 'GPIO', 'url' => ['site/gpio']],
                         ['label' => 'About', 'url' => ['site/about']],
-                        ['label' => 'Contact', 'url' => ['site/contact']],
+                        ['label' => 'Contacto', 'url' => ['site/contact']],
                         Yii::$app->user->isGuest ? (
                             ['label' => 'Login', 'url' => ['/site/login']]
                         ) : (
