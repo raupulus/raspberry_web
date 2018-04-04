@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
         el software instalado y el firmware.
     </p>
 
-    <form action="#" method="post" role="form-inline">
+    <form action="#" method="post" role="form-inline" class="form-claro">
         <div class="checkbox">
             <label>
                 <input type="checkbox" /> Software
