@@ -65,7 +65,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Muestra el menú de selección para gestionar pines GPIO
+     * Muestra el menú de selección para gestionar pines GPIO.
      * @return string
      */
     public function actionGpio()
@@ -74,7 +74,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Información sobre el sistema y el hardware
+     * Información sobre el sistema y el hardware.
      * @return string
      */
     public function actionMonitorizar()
@@ -83,12 +83,22 @@ class SiteController extends Controller
     }
 
     /**
-     * Información sobre el proyecto e instrucciones de uso
+     * Información sobre el proyecto e instrucciones de uso.
      * @return string
      */
     public function actionInformacion()
     {
         return $this->render('informacion');
+    }
+
+    /**
+     * Lleva a la página de actualizar el sistema y el firmware.
+     *
+     * @return string
+     */
+    public function actionActualizar()
+    {
+        return $this->render('actualizar');
     }
 
     /**
@@ -141,15 +151,5 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 }
