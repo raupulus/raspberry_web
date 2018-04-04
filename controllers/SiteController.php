@@ -74,6 +74,15 @@ class SiteController extends Controller
     }
 
     /**
+     * Información sobre el sistema y el hardware
+     * @return string
+     */
+    public function actionMonitorizar()
+    {
+        return $this->render('monitorizar');
+    }
+
+    /**
      * Login action.
      *
      * @return Response|string
