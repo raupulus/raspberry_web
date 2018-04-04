@@ -64,6 +64,7 @@ AppAsset::register($this);
                         ['label' => 'Inicio', 'url' => ['site/index']],
                         ['label' => 'GPIO', 'url' => ['site/gpio']],
                         ['label' => 'Monitorización', 'url' => ['site/monitorizar']],
+                        ['label' => 'Información', 'url' => ['site/informacion']],
                         ['label' => 'About', 'url' => ['site/about']],
                         ['label' => 'Contacto', 'url' => ['site/contact']],
                         Yii::$app->user->isGuest ? (

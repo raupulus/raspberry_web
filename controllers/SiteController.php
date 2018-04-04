@@ -83,6 +83,15 @@ class SiteController extends Controller
     }
 
     /**
+     * Información sobre el proyecto e instrucciones de uso
+     * @return string
+     */
+    public function actionInformacion()
+    {
+        return $this->render('informacion');
+    }
+
+    /**
      * Login action.
      *
      * @return Response|string
