@@ -98,6 +98,9 @@ class SiteController extends Controller
      */
     public function actionActualizar()
     {
+        //if (Yii::$app->request->post()) {
+
+        //}
         return $this->render('actualizar');
     }
 

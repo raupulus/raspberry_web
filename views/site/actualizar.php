@@ -17,19 +17,31 @@ $this->params['breadcrumbs'][] = $this->title;
         el software instalado y el firmware.
     </p>
 
-    <form action="#" method="post" role="form-inline" class="form-claro">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" /> Software
-            </label>
+    <?= Html::beginForm([
+        'site/actualizar', // Lugar donde lleva el submit
+        ],
+        'post',
+        [
+            'enctype' => 'multipart/form-data',
+            'class' => 'form-verde form-horizontal col-lg-6 col-lg-offset-3 ',
+            'id' => 'alquilar-form', // Nombre o id del formulario
+        ]
+    ); ?>
 
-            <br />
+    <?= Html::label('Software', 'software', ['class' => 'label']) ?>
+    <?= Html::checkbox('software', true, ['class' => 'form-marcar']) ?>
 
-            <label>
-                <input type="checkbox" /> Firmware
-            </label>
-        </div>
+    <br /><br />
 
-        <input type="submit" value="Actualizar" class="btn btn-default" />
-    </form>
+    <?= Html::label('Firmware', 'firmware', ['class' => 'label']) ?>
+    <?= Html::checkbox('firmware', true, ['class' => 'form-marcar']) ?>
+
+    <br /><br />
+
+    <div class=“form-group”>
+        <?= Html::SubmitButton('Actualizar', ['class' => 'btn btn-danger'
+        ]); ?>
+    </div>
+
+    <?= Html::endForm() ?>
 </div>

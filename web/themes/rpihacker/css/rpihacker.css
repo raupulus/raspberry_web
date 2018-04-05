@@ -67,7 +67,17 @@ background-color: black;
 
 form.form-claro {
     color: #000;
+    text-align: center;
     background-color: #fff;
+}
+
+form.form-verde {
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background-color: #32cd32;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #f5e79e;
 }
 
 input {
