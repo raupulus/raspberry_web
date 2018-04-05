@@ -93,14 +93,19 @@ class SiteController extends Controller
 
     /**
      * Lleva a la página de actualizar el sistema y el firmware.
+     * En el caso de recibir petición mediante POST recarga la página enviando
+     * las variables "firmware" y "software" con su valor booleano recibido.
      *
      * @return string
      */
     public function actionActualizar()
     {
-        //if (Yii::$app->request->post()) {
-
-        //}
+        if ($checkbox = Yii::$app->request->post()) {
+            return $this->render('actualizar', [
+                'software' => isset($checkbox['software']) ? 1 : 0,
+                'firmware' => isset($checkbox['firmware']) ? 1 : 0,
+            ]);
+        }
         return $this->render('actualizar');
     }
 

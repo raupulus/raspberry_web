@@ -1,11 +1,34 @@
 <?php
 
 /* @var $this yii\web\View */
+/* @var $software Boolean que entra por POST si envías el formulario */
+/* @var $firmware Boolean que entra por POST si envías el formulario */
 
 use yii\helpers\Html;
 
 $this->title = 'Actualizar';
 $this->params['breadcrumbs'][] = $this->title;
+
+//var_dump($this);
+function actualizar() {
+    if ($this->firmware && $this->software) {
+        echo 'Se actualiza Firmware y Software';
+    } elseif ($this->firmware) {
+        echo 'Se actualiza solo Firmware';
+    } elseif ($this->software) {
+        echo 'Se actualiza solo Software';
+    }
+}
+
+if (Yii::$app->request->isPost) {
+    $checkbox = $this;
+    var_dump($checkbox);
+    die();
+    //actualizar();
+    //echo '<h1>'.Yii::$app->request->post('software').'</h1>';
+    //echo '<h1>'.$checkbox['software'].'</h1>';
+    echo '<h1>'.$checkbox.'</h1>';
+}
 
 ?>
 <div class="actualizar">
