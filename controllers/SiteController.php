@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use function shell_exec;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -101,11 +102,41 @@ class SiteController extends Controller
     public function actionActualizar()
     {
         if ($checkbox = Yii::$app->request->post()) {
+            $software = isset($checkbox['software']) ? true : false;
+            $firmware = isset($checkbox['firmware']) ? true : false;
+
+            if ($software && $firmware) {
+                Yii::$app->session->setFlash('success',
+                    'Se ha enviado la orden de actualizar Software y    
+                     Firmware.'.
+                    '<br />'.
+                    'No es buena idea volver a enviar la orden.'
+                );
+                //shell_exec('actualizar');
+            } elseif ($firmware) {
+                Yii::$app->session->setFlash('success',
+                    'Se actualiza solo Firmware'.
+                    '<br />'.
+                    'No es buena idea volver a enviar la orden.'
+                );
+                //shell_exec('actualizar -f');
+            } elseif ($software) {
+                Yii::$app->session->setFlash('success',
+                    'Se actualiza solo Software.'.
+                    '<br />'.
+                    'No es buena idea volver a enviar la orden.'
+                );
+                //shell_exec('actualizar -s');
+            }
+
+            /*
             return $this->render('actualizar', [
-                'software' => isset($checkbox['software']) ? 1 : 0,
-                'firmware' => isset($checkbox['firmware']) ? 1 : 0,
+            'software' => $software,
+            'firmware' => $firmware
             ]);
+            */
         }
+
         return $this->render('actualizar');
     }
 
