@@ -59,3 +59,31 @@ al usuario **www-data** y el grupo llamado igual. Para lograrlo ejecutamos:
 Se recomienda periódicamente sincronizar con este repositorio. Si has
 realizado cambios en tu réplica local, tendrás que mezclar o tener cuidado
 de no rebasarlos.
+
+
+## Configurar para apache en Debian/Raspbian
+
+A continuaci�n un ejemplo desplegando el repositorio en apache, personaliza en
+tu situaci�n las rutas. Se contempla al usuario como dueño y el grupo de apache
+con permisos. Tambi�n puedes definirlo para ser gestionado �nicamente por 
+apache con el usuario www-data y no elevar permisos de grupo.
+
+```Bash
+    sudo su -c "cat raspberry_web.conf > /etc/apache2/sites-available/raspberry_web.conf"
+
+    sudo mkdir -p /var/log/apache2/raspberry_web
+
+    ln -s /home/$(whoami)/git/raspberry_web/ /var/www/html/Proyectos/raspberry_web
+
+    sudo chown $(whoami):www-data -R /var/www/html/Proyectos/raspberry_web/
+
+    sudo chmod 775 -R /var/www/html/Proyectos/raspberry_web/web
+
+    cd /var/www/html/Proyectos/raspberry_web
+
+    sudo chmod 775 -R vendor models controllers db components config commands runtime tests views web
+
+    sudo a2ensite raspberry_web
+
+    sudo service apache2 restart
+```
