@@ -86,3 +86,31 @@ input {
     background-color: #32cd32;
     border: 3px solid red;
 }
+
+table {
+    margin: 5px auto;
+    padding: 3px;
+    color: black;
+    font-size: 1.3em;
+    background-color: #32cd32;
+}
+
+table tr:nth-child(even) {
+    background-color: #32aa32;
+}
+
+table tr:nth-child(odd) {
+    background-color: #66ff32;
+}
+
+table td {
+    padding: 10px 5px;
+}
+
+table ul {
+    margin: 3px 10px;
+}
+
+table table {
+    width: 100%;
+}

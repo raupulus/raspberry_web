@@ -44,7 +44,7 @@ $CPU = array_reduce(preg_split("/[\s\n\t]+/", $CPU), function ($a,$b) {
 $CPU = ($CPU/shell_exec('nproc --all')); // Divido entre nº de hilos CPU
 
 $procesos = shell_exec('ps aux --width 30 --sort -rss | head -n 20| tr -s " "');
-$procesos = preg_split("/[\n]+/", $procesos);
+$procesos = array_filter(preg_split("/[\n]+/", $procesos), "strlen"); // Limpia vacíos
 
 $uptime = shell_exec('uptime');
 ?>
