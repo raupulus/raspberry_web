@@ -75,19 +75,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <td class="pulsador">
                         <input class="activar" type="button"
-                               name="<?= $n; ?>" value="<?= $n; ?>"/>
+                               name="activar" value="<?= $n; ?>" />
                     </td>
                     <td class="pulsador">
-                        <input class="desactivar" type="submit"
-                               name="<?= $n; ?>" value="<?= $n; ?>"/>
+                        <input class="desactivar" type="button"
+                               name="desactivar" value="<?= $n; ?>" />
                     </td>
                     <td class="pulsador">
-                        <input class="activar" type="submit"
-                               name="<?= $n; ?>" value="<?= $n; ?>"/>
+                        <input class="activar" type="button"
+                               name="parpadear1" value="<?= $n; ?>" />
                     </td>
                     <td class="pulsador">
-                        <input class="activar" type="submit"
-                               name="<?= $n; ?>" value="<?= $n; ?>"/>
+                        <input class="activar" type="button"
+                               name="parpadear10" value="<?= $n; ?>" />
                     </td>
                     <td>¿?</td>
                 <?= Html::endForm() ?>
@@ -98,33 +98,40 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <script type="text/javascript">
-    window.onload = {
-        $.('input[type="button"]').click(enviar);
-    }
+    window.onload = function() {
+        console.log('El documento está preparado completamente');
+        $('input[type="button"]').click(function() {
+            valor = $(this).val();
+            nombre = $(this).attr('name');
+            form_id = $(this).parentElement('form');
+            enviar(valor, nombre, form_id);
+        });
+    };
 
-    function enviar(){
-        console.log('Entra en función enviar()');
-        /*
-        if(!hasError){
-            str = $('#'+formulario).serialize();
-            $.ajax({
-                type: "POST",
-                url: "<?= Url::to('site/gpio'); ?>",
-                data: str,
-                beforeSend : function() {
-                    //$("#login").attr("disabled",true);
-                },
-                success:function(data){
-                    //document.getElementById('respuesta').innerHTML = data;
-                    //$("#login").attr("disabled",false);
-                    alert('encendido');
-                },
-                error: function(data) { // if error occured
-                    alert('error');
-                }
-            });
-        }
-        */
+    function enviar(valor, nombre){
+        $.ajax({
+            type: 'POST',
+            dataType: 'html',
+            url: "<?= Url::to(['site/gpio']); ?>",
+            data: 'nombre='+nombre+'&valor='+valor,
+            beforeSend : function() {
+                // Modificando icono de estado (cambiar por bombillas)
+            },
+            success: function(data) {
+                // Modificando icono de estado
+                 if (nombre == 'encender') {
+
+                 } else if (nombre == 'apagar') {
+
+                 }
+
+                // Mostrando por consola
+                console.log('Se ha recibido: ' + data);
+            },
+            error: function(data) {
+                alert('error');
+            }
+        });
         return false;
     }
 </script>
