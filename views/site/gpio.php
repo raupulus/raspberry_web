@@ -27,48 +27,44 @@ $this->params['breadcrumbs'][] = $this->title;
             </tr>
             <tr>
                 <td class="pulsador">
-                    <INPUT class="activar" type="submit" name="todoON" value="todoON"/>
+                    <input class="activar" type="submit" name="todoON" value="todoON"/>
                 </td>
                 <td class="pulsador">
-                    <INPUT class="desactivar" type="submit" name="todoOFF" value="todoOFF"/>
+                    <input class="desactivar" type="submit" name="todoOFF" value="todoOFF"/>
                 </td>
                 <td class="pulsador">
-                    <INPUT class="activar" type="submit" name="parpadeoORDEN" value="parpadeoORDEN"/>
+                    <input class="activar" type="submit" name="parpadeoORDEN" value="parpadeoORDEN"/>
                 </td>
                 <td class="pulsador">
-                    <INPUT class="activar" type="submit" name="parpadeoALEATORIO" value="parpadeoALEATORIO"/>
+                    <input class="activar" type="submit" name="parpadeoALEATORIO" value="parpadeoALEATORIO"/>
                 </td>
                 <td class="pulsador">
-                    <INPUT class="activar" type="submit" name="parpadeoTODO" value="parpadeoTODO"/>
+                    <input class="activar" type="submit" name="parpadeoTODO" value="parpadeoTODO"/>
                 </td>
             </tr>
         </table>
 
         <table class="tablaprincipal">
-            <TR>
-                <TH>PIN</TH>
-                <TH>ACTIVAR</TH>
-                <TH>DESACTIVAR</TH>
-                <TH>1PARPADEO</TH>
-                <TH>PARPADEAR</TH>
-                <TH>ESTADO</TH>
-            </TR>
+            <tr>
+                <th>PIN</th>
+                <th>ACTIVAR</th>
+                <th>DESACTIVAR</th>
+                <th>1PARPADEO</th>
+                <th>PARPADEAR</th>
+                <th>ESTADO</th>
+            </tr>
 
-            <?php
-            foreach (range(1,40) as $n) {
-            ?>
-                <TR>
-                    <TD><?= $n; ?></TD>
-                    <TD class="pulsador"><INPUT class="activar" type="submit" name="<?= $n; ?>" value="<?= $n; ?>"/></TD>
-                    <TD class="pulsador"><INPUT class="desactivar" type="submit" name="<?= $n; ?>" value="<?= $n; ?>"/></TD>
-                    <TD class="pulsador"><INPUT class="activar" type="submit" name="<?= $n; ?>" value="<?= $n; ?>"/></TD>
-                    <TD class="pulsador"><INPUT class="activar" type="submit" name="<?= $n; ?>" value="<?= $n; ?>"/></TD>
-                    <TD>¿?</TD>
-                </TR>
+            <?php foreach (range(1,40) as $n): ?>
+                <tr>
+                    <td><?= $n; ?></td>
+                    <td class="pulsador"><input class="activar" type="submit" name="<?= $n; ?>" value="<?= $n; ?>"/></td>
+                    <td class="pulsador"><input class="desactivar" type="submit" name="<?= $n; ?>" value="<?= $n; ?>"/></td>
+                    <td class="pulsador"><input class="activar" type="submit" name="<?= $n; ?>" value="<?= $n; ?>"/></td>
+                    <td class="pulsador"><input class="activar" type="submit" name="<?= $n; ?>" value="<?= $n; ?>"/></td>
+                    <td>¿?</td>
+                </tr>
 
-                <?php
-            }
-            ?>
+            <?php endforeach; ?>
         </table>
     </form>
 </div>
