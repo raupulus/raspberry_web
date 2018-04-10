@@ -72,15 +72,20 @@ class SiteController extends Controller
     public function actionGpio()
     {
         // && $inputPost->isAjax)
-        if ($inputPost = Yii::$app->request->post()) {
+        //if ($inputPost = Yii::$app->request->post()) {
+        if (Yii::$app->request->isAjax) {
+            $inputPost = Yii::$app->request->post();
+            $nombre = $inputPost['nombre'];
+            $valor = $inputPost['valor'];
+            return json_encode('He recibido el nombre: '.$nombre.
+                ' y el valor: '.$valor);
+
             //shell_exec('gestionarGPIO --on '.$inputPost[]);
-            Yii::$app->session->setFlash('success',
-                'Activado pin '.$inputPost['pin']
-            );
-            //echo 'PIN → '.$inputPost['pin'];
-        } else {
-            return $this->render('gpio');
+            //Yii::$app->session->setFlash('success',
+            //    'Activado pin '.$inputPost['pin']
+            //);
         }
+        return $this->render('gpio');
     }
 
     /**
