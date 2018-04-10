@@ -1,21 +1,18 @@
 <?php
 
-use yii\widgets\Menu;
+/* @var $this \yii\web\View */
+/* @var $content string */
+
 use app\widgets\Alert;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use yii\widgets\Menu;
 
-/**
- * @var $this \yii\base\View
- * @var $content string
- */
-// $this->registerAssetBundle('app');
+
 AppAsset::register($this);
-
 ?>
 <?php $this->beginPage(); ?>
-
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
@@ -24,12 +21,12 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
-    <?php $this->head() ?>
-
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?php echo Html::encode(\Yii::$app->name); ?></title>
+    <?php $this->head() ?>
+
+    <title><?= Html::encode(\Yii::$app->name); ?></title>
 
     <!-- Custom CSS -->
     <link href="<?= $this->theme->baseUrl ?>/css/rpihacker.css" rel="stylesheet">
@@ -112,7 +109,7 @@ AppAsset::register($this);
     </div>
     <!-- /.container -->
 
-<?php $this->endBody(); ?>
+<?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage(); ?>
