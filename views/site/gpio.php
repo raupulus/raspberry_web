@@ -55,60 +55,76 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
 
         <?php foreach (range(1,40) as $n): ?>
-            <tr>
-                <?= Html::beginForm([
-                    'site/gpio',
-                ],
-                    'post',
-                    [
-                        'enableAjaxValidation'=>false,
-                        'enctype' => 'multipart/form-data',
-                        'class' => 'form-horizontal col-lg-6 col-lg-offset-3 ',
-                        'id' => 'gpio'.$n.'-form',
-                        //'afterValidate'=>'js:enviar',
-                        //'onsubmit'=>"",
-                    ]
-                    ); ?>
+            <?= Html::beginForm([
+                'site/gpio',
+            ],
+                'post',
+                [
+                    'enableAjaxValidation'=>false,
+                    'enctype' => 'multipart/form-data',
+                    'class' => 'form-horizontal col-lg-6 col-lg-offset-3 ',
+                    'id' => 'gpio'.$n.'-form',
+                    //'afterValidate'=>'js:enviar',
+                    //'onsubmit'=>"",
+                ]
+            ); ?>
+                <?= Html::hiddenInput('pin', $value = $n, []); ?>
+                <tr>
                     <td><?= $n; ?></td>
 
-                    <input type="text" name="pin" value="<?= $n ?>" hidden />
+                    <td class="pulsador">
+                        <?= Html::button('', [
+                            'class' => 'activar',
+                            'name' => 'activar',
+                            'value' => $n,
+                        ]) ?>
+                    </td>
 
                     <td class="pulsador">
-                        <input class="activar" type="button"
-                               name="activar" value="<?= $n; ?>" />
+                        <?= Html::button('', [
+                            'class' => 'desactivar',
+                            'name' => 'desactivar',
+                            'value' => $n,
+                        ]) ?>
                     </td>
+
                     <td class="pulsador">
-                        <input class="desactivar" type="button"
-                               name="desactivar" value="<?= $n; ?>" />
+                        <?= Html::button('', [
+                            'class' => 'activar',
+                            'name' => 'parpadear1',
+                            'value' => $n,
+                        ]) ?>
                     </td>
+
                     <td class="pulsador">
-                        <input class="activar" type="button"
-                               name="parpadear1" value="<?= $n; ?>" />
+                        <?= Html::button('', [
+                            'class' => 'activar',
+                            'name' => 'parpadear10',
+                            'value' => $n,
+                        ]) ?>
                     </td>
-                    <td class="pulsador">
-                        <input class="activar" type="button"
-                               name="parpadear10" value="<?= $n; ?>" />
-                    </td>
+
                     <td>¿?</td>
-                <?= Html::endForm() ?>
-            </tr>
+                </tr>
+            <?= Html::endForm() ?>
         <?php endforeach; ?>
     </table>
 </div>
 
-
 <script type="text/javascript">
     window.onload = function() {
         console.log('El documento está preparado completamente');
-        $('input[type="button"]').click(function() {
+        $('button[type="button"]').click(function() {
             valor = $(this).val();
             nombre = $(this).attr('name');
-            form_id = $(this).parentElement('form');
+            form_id = $(this).parent('form').append('<p>HOLA</p>');
             enviar(valor, nombre, form_id);
+
+            console.log(form_id);
         });
     };
 
-    function enviar(valor, nombre){
+    function enviar(valor, nombre) {
         $.ajax({
             type: 'POST',
             dataType: 'html',
@@ -121,6 +137,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 // Modificando icono de estado
                  if (nombre == 'encender') {
 
+
                  } else if (nombre == 'apagar') {
 
                  }
@@ -130,6 +147,8 @@ $this->params['breadcrumbs'][] = $this->title;
             },
             error: function(data) {
                 alert('error');
+                console.log('Ha ocurrido un error al enviar petición al ' +
+                    'servidor, es necesario comprobar registros');
             }
         });
         return false;
