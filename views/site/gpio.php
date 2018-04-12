@@ -55,60 +55,58 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
 
         <?php foreach (range(1,40) as $n): ?>
-<!--            --><?//= Html::beginForm([
-//                'site/gpio',
-//            ],
-//            'post',
-//            [
-//                'enableAjaxValidation'=>false,
-//                'enctype' => 'multipart/form-data',
-//                'class' => 'form-horizontal col-lg-6 col-lg-offset-3 ',
-//                'id' => 'gpio'.$n.'-form',
-//                //'afterValidate'=>'js:enviar',
-//                //'onsubmit'=>"",
-//            ]
-//            ); ?>
-        <form>
+        <tr>
+            <?= Html::beginForm([
+                'site/gpio',
+            ],
+            'post',
+            [
+                'enableAjaxValidation'=>false,
+                'enctype' => 'multipart/form-data',
+                'class' => 'form-horizontal col-lg-6 col-lg-offset-3 ',
+                'id' => 'gpio'.$n.'-form',
+                //'afterValidate'=>'js:enviar',
+                //'onsubmit'=>"",
+            ]); ?>
+
             <?= Html::hiddenInput('pin', $value = $n, []); ?>
-                <tr>
-                    <td><?= $n; ?></td>
+                <td><?= $n; ?></td>
 
-                    <td class="pulsador">
-                        <?= Html::button('', [
-                            'class' => 'activar',
-                            'name' => 'activar',
-                            'value' => $n,
-                        ]) ?>
-                    </td>
+                <td class="pulsador">
+                    <?= Html::button('', [
+                        'class' => 'activar',
+                        'name' => 'activar',
+                        'value' => $n,
+                    ]) ?>
+                </td>
 
-                    <td class="pulsador">
-                        <?= Html::button('', [
-                            'class' => 'desactivar',
-                            'name' => 'desactivar',
-                            'value' => $n,
-                        ]) ?>
-                    </td>
+                <td class="pulsador">
+                    <?= Html::button('', [
+                        'class' => 'desactivar',
+                        'name' => 'desactivar',
+                        'value' => $n,
+                    ]) ?>
+                </td>
 
-                    <td class="pulsador">
-                        <?= Html::button('', [
-                            'class' => 'activar',
-                            'name' => 'parpadear1',
-                            'value' => $n,
-                        ]) ?>
-                    </td>
+                <td class="pulsador">
+                    <?= Html::button('', [
+                        'class' => 'activar',
+                        'name' => 'parpadear1',
+                        'value' => $n,
+                    ]) ?>
+                </td>
 
-                    <td class="pulsador">
-                        <?= Html::button('', [
-                            'class' => 'activar',
-                            'name' => 'parpadear10',
-                            'value' => $n,
-                        ]) ?>
-                    </td>
+                <td class="pulsador">
+                    <?= Html::button('', [
+                        'class' => 'activar',
+                        'name' => 'parpadear10',
+                        'value' => $n,
+                    ]) ?>
+                </td>
 
-                    <td>¿?</td>
-                </tr>
-        </form>
-<!--            --><?//= Html::endForm() ?>
+                <td>¿?</td>
+            <?= Html::endForm() ?>
+        </tr>
         <?php endforeach; ?>
     </table>
 </div>
