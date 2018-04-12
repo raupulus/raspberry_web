@@ -1,0 +1,72 @@
+@media screen and (max-width: 1024px) {
+
+/*
+----------------------
+TÍTULO
+----------------------
+*/
+    H1 {
+        padding: 20px 0 0 0;
+        font-size: 1.6em;
+    }
+
+/*
+----------------------
+BARRA DE MENÚ
+----------------------
+*/
+    #cajamenuprincipal {
+        margin: 0;
+        border: 3px groove grey;
+    }
+    #menuprincipal LI {
+        padding: 4px;
+    }
+/*
+----------------------
+TABLA CONTROL GPIO
+----------------------
+*/
+    .tablatodos {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    .tablatodos TD, .tablatodos TH {
+        height: 80px;
+        padding: 0;
+    }
+    .tablaprincipal {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: none;
+    }
+    .tablaprincipal TH {
+        padding: 0;
+    }
+    .tablaprincipal TD {
+        height: 50px;
+    }
+/*
+----------------------
+INPUT
+----------------------
+*/
+    .activar {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .desactivar {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}

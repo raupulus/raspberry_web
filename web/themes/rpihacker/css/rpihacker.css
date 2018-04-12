@@ -1,0 +1,116 @@
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+body {
+    color: #aaa;
+}
+
+.navbar-inverse {
+    background-color: #fff;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: red;
+}
+
+.navbar-toggle {
+    background-color: #333;
+}
+
+
+body {
+background-color: black;
+color: #32cd32 ;
+}
+
+.navbar-header img {
+height: 50px;
+}
+
+.navbar-inverse {
+background-color: black;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+color: #32cd32;
+text-decoration: underline;
+}
+
+.well {
+font-weight: bolder;
+border: 1px solid #32cd32;
+background-color: black;
+}
+
+form.form-claro {
+    color: #000;
+    text-align: center;
+    background-color: #fff;
+}
+
+form.form-verde {
+    padding: 5px;
+    color: #000;
+    text-align: center;
+    background-color: #32cd32;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #f5e79e;
+}
+
+input {
+    color: black;
+    padding: 2px;
+    background-color: #32cd32;
+    border: 3px solid red;
+}
+
+table {
+    margin: 5px auto;
+    padding: 3px;
+    color: black;
+    font-size: 1.3em;
+    background-color: #32cd32;
+}
+
+table tr:nth-child(even) {
+    background-color: #32aa32;
+}
+
+table tr:nth-child(odd) {
+    background-color: #66ff32;
+}
+
+table td {
+    padding: 10px 5px;
+}
+
+table ul {
+    margin: 3px 10px;
+}
+
+table table {
+    width: 100%;
+}
