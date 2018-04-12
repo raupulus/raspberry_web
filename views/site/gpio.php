@@ -55,20 +55,21 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
 
         <?php foreach (range(1,40) as $n): ?>
-            <?= Html::beginForm([
-                'site/gpio',
-            ],
-                'post',
-                [
-                    'enableAjaxValidation'=>false,
-                    'enctype' => 'multipart/form-data',
-                    'class' => 'form-horizontal col-lg-6 col-lg-offset-3 ',
-                    'id' => 'gpio'.$n.'-form',
-                    //'afterValidate'=>'js:enviar',
-                    //'onsubmit'=>"",
-                ]
-            ); ?>
-                <?= Html::hiddenInput('pin', $value = $n, []); ?>
+<!--            --><?//= Html::beginForm([
+//                'site/gpio',
+//            ],
+//            'post',
+//            [
+//                'enableAjaxValidation'=>false,
+//                'enctype' => 'multipart/form-data',
+//                'class' => 'form-horizontal col-lg-6 col-lg-offset-3 ',
+//                'id' => 'gpio'.$n.'-form',
+//                //'afterValidate'=>'js:enviar',
+//                //'onsubmit'=>"",
+//            ]
+//            ); ?>
+        <form>
+            <?= Html::hiddenInput('pin', $value = $n, []); ?>
                 <tr>
                     <td><?= $n; ?></td>
 
@@ -106,7 +107,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <td>¿?</td>
                 </tr>
-            <?= Html::endForm() ?>
+        </form>
+<!--            --><?//= Html::endForm() ?>
         <?php endforeach; ?>
     </table>
 </div>
@@ -124,22 +126,45 @@ $this->params['breadcrumbs'][] = $this->title;
         });
     };
 
-    function enviar(valor, nombre) {
+    /**
+     * Comprueba el estado de un pin específico
+     */
+
+    function comprobarPin(pin) {
+        estadoPin = false;
+        return estadoPin
+    }
+
+    /**
+     * Comprueba el estado de todos los pines y los devuelve en un array.
+     */
+    function comprobarPines() {
+        estadoPines = [];
+        return estadoPines;
+    }
+
+
+    /**
+     * Envía la acción al pulsar un botón desde la tabla.
+     * @param pin  El número de pin sobre el que se actúa
+     * @param nombre El nombre de la acción
+     * @returns {boolean} Devuelve true si se realiza correctamente.
+     */
+    function enviar(pin, nombre) {
         $.ajax({
             type: 'POST',
             dataType: 'html',
             url: "<?= Url::to(['site/gpio']); ?>",
-            data: 'nombre='+nombre+'&valor='+valor,
+            data: 'nombre='+nombre+'&pin='+pin,
             beforeSend : function() {
                 // Modificando icono de estado (cambiar por bombillas)
             },
             success: function(data) {
                 // Modificando icono de estado
                  if (nombre == 'encender') {
-
-
+                     console.log('Se enciende el pin ' + pin);
                  } else if (nombre == 'apagar') {
-
+                     console.log('Se apaga el pin ' + pin);
                  }
 
                 // Mostrando por consola
