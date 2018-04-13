@@ -31,12 +31,12 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'nombre',
             'apellidos',
+            'rol',
             'email:email',
-            'password',
             'created_at',
             'updated_at',
-            'auth_key',
-            'rol',
+            //'password',
+            //'auth_key',
         ],
     ]) ?>
 

@@ -12,8 +12,8 @@ CREATE TABLE usuarios (
   , password      VARCHAR(255) NOT NULL
   , created_at    TIMESTAMP(0) DEFAULT current_timestamp
   , updated_at    TIMESTAMP(0) DEFAULT current_timestamp
-  , auth_key      VARCHAR(255)
-  , rol           VARCHAR(255) DEFAULT 'basico'
+  , auth_key      VARCHAR(255) UNIQUE
+  , rol           VARCHAR(255) NOT NULL DEFAULT 'basico'
 );
 
 -- USUARIOS PERMANENTES DE LA APLICACIÓN --

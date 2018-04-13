@@ -4,11 +4,16 @@
 /* @var $content string */
 
 use app\widgets\Alert;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use yii\widgets\Menu;
 
+function esAdmin() {
+    return Yii::$app->user->identity->rol === 'administrador';
+}
 
 AppAsset::register($this);
 ?>
@@ -46,17 +51,24 @@ AppAsset::register($this);
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?= Yii::getAlias('@web/index.php'); ?>">
-                    <img src="<?= $this->theme->baseUrl ?>/images/logo.png" alt="">
+                    <img src="<?= $this->theme->baseUrl ?>/images/logo.png"
+                         alt="" />
                 </a>
             </div>
 
             <!-- Entradas del menú -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <?= Menu::widget([
+                <?php
+                NavBar::begin([
+                    'brandLabel' => Yii::$app->name,
+                    'brandUrl' => Yii::$app->homeUrl,
                     'options' => [
-                      "id"  => "nav",
-                      "class" => "nav navbar-nav"
+                        'id' => 'nav',
+                        'class' => 'nav navbar',
                     ],
+                ]);
+                echo Nav::widget([
+                    'options' => ['class' => 'navbar-nav navbar-right'],
                     'items' => [
                         ['label' => 'Inicio', 'url' => ['site/index']],
                         ['label' => 'GPIO', 'url' => ['site/gpio']],
@@ -64,26 +76,53 @@ AppAsset::register($this);
                         ['label' => 'Información', 'url' => ['site/informacion']],
                         ['label' => 'Actualizar', 'url' => ['site/actualizar']],
                         ['label' => 'Contacto', 'url' => ['site/contact']],
+
+                        /* Opciones solo para usuarios logueados */
                         Yii::$app->user->isGuest ? (
-                            ['label' => 'Login', 'url' => ['/site/login']]
+                        ['label' => 'Login',
+                            'items' => [
+                                ['label' => 'Entrar', 'url' => ['/site/login']],
+                                ['label' => 'Crear Cuenta', 'url' => ['/usuarios/create']],
+                            ]
+                        ]
                         ) : (
-                            '<li>'
-                            . Html::beginForm(['/site/logout'], 'post')
-                            . Html::submitButton(
-                                'Logout (' . Yii::$app->user->identity->username . ')',
-                                ['class' => 'btn btn-link logout']
-                            )
-                            . Html::endForm()
-                            . '</li>'
-                        )
+                        ['label' => Yii::$app->user->identity->nombre,
+                            'items' => [
+                                ['label' => 'Perfil', 'url' => [
+                                    '/usuarios/view',
+                                    'id' => Yii::$app->user->id]
+                                ],
+                                (
+                                '<li>'
+                                . Html::beginForm(['/site/logout'], 'post')
+                                . Html::submitButton(
+                                    'Cerrar Sesión',
+                                    ['class' => 'btn btn-link logout']
+                                )
+                                    . Html::endForm()
+                                    . '</li>'
+                                ),
+
+                                /* A continuación opciones solo para admins */
+                                esAdmin() ? (
+                                   [
+                                       'label' => 'Usuarios',
+                                       'url' => ['/usuarios/index']
+                                   ]
+                                ) : ''
+                            ]
+                        ]
+                        ),
                     ],
                 ]);
+                NavBar::end();
                 ?>
             </div>
             <!-- /Entradas del menú (.navbar-collapse) -->
         </div>
         <!-- /Menú de navegación (.container) -->
     </nav>
+
 
     <!-- Contenido del sitio -->
     <div class="container">
