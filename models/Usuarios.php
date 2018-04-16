@@ -20,6 +20,8 @@ use yii\web\IdentityInterface;
  */
 class Usuarios extends \yii\db\ActiveRecord implements IdentityInterface
 {
+    //const ADMINISTRADOR = false;
+
     /**
      * {@inheritdoc}
      */

@@ -7,6 +7,7 @@ use app\models\Usuarios;
 use app\models\UsuariosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
 /**
@@ -25,6 +26,23 @@ class UsuariosController extends Controller
                 'actions' => [
                     'delete' => ['POST'],
                 ],
+            ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['create', 'delete', 'index'],
+                'rules' => [
+                    'allow' => true,
+                    'roles' => ['@'],
+                ],
+                /*
+                 ‘matchCallback’ => function($rule, $action) {
+                        Yii::$app→user→identity→nombre == ‘pepe’
+                ],
+
+                'denyCallback' => function ($rule, $action) {
+                    throw new \Exception('No tienes los suficientes permisos para acceder a esta página');
+                }
+                */
             ],
         ];
     }
