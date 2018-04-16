@@ -31,19 +31,23 @@ class UsuariosController extends Controller
                 'class' => AccessControl::className(),
                 'only' => ['create', 'delete', 'index'],
                 'rules' => [
+                    [
                     'allow' => true,
                     'roles' => ['@'],
+                    'matchCallback' => function ($rule, $action) {
+                        return Yii::$app->user->identity->rol == 'administrador';
+                    }
+                    ],
                 ],
+            ],
+
                 /*
-                 ‘matchCallback’ => function($rule, $action) {
-                        Yii::$app→user→identity→nombre == ‘pepe’
-                ],
+
 
                 'denyCallback' => function ($rule, $action) {
                     throw new \Exception('No tienes los suficientes permisos para acceder a esta página');
                 }
                 */
-            ],
         ];
     }
 
