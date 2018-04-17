@@ -42,8 +42,6 @@ class UsuariosController extends Controller
             ],
 
                 /*
-
-
                 'denyCallback' => function ($rule, $action) {
                     throw new \Exception('No tienes los suficientes permisos para acceder a esta página');
                 }
