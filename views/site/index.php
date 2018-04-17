@@ -26,7 +26,11 @@ $this->title = 'Raspberry PI Control WEB';
                     monitorizar aspectos de salud como temperatura, procesos...
                 </p>
 
-                <a class="btn btn-primary btn-lg" href="#">¡Llamada de acción!</a>
+                <a class="btn btn-primary btn-lg"
+                   target=_blank
+                   href="http://www.fryntiz.es">
+                    WEB del Administrador
+                </a>
             </div>
             <!-- /.col-md-4 -->
         </div>
@@ -34,19 +38,23 @@ $this->title = 'Raspberry PI Control WEB';
 
         <div class="row">
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>GPIO</h2>
 
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.
+                    En este apartado puedes comprobar cada uno de los pines GPIO
+                    independientemente o en conjunto global.
+                    <br />
+                    El principal objetivo de esta sección es que mediante unos
+                    sencillos clicks puedas activar o desactivar cada salida
+                    de forma independiente y testear el funcionamiento sobre
+                    el relé, sensor o dispositivo correspondiente.
                 </p>
 
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
             </div>
+
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Monitorización</h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -56,7 +64,7 @@ $this->title = 'Raspberry PI Control WEB';
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
             </div>
             <div class="col-lg-4">
-                <h2>Heading</h2>
+                <h2>Actualizar</h2>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
