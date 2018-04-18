@@ -28,11 +28,14 @@ $this->title = 'Raspberry PI Control WEB';
                     monitorizar aspectos de salud como temperatura, procesos...
                 </p>
 
-                <a class="btn btn-primary btn-lg"
-                   target=_blank
-                   href="http://www.fryntiz.es">
-                    WEB del Administrador
-                </a>
+                <p>
+                    <?= Html::a('WEB del Administrador',
+                        'http://www.fryntiz.es',
+                        [   // Opciones
+                            'target' => '_blank',
+                            'class' => 'btn-primary btn-lg'
+                        ]) ?>
+                </p>
             </div>
             <!-- /.col-md-4 -->
         </div>
