@@ -1,5 +1,5 @@
-Proyecto integrado
-==================
+Proyecto Raspberry PI WEB
+=========================
 
 Este es el documento principal, que incluye la portada  y el índice de contenidos.
 
