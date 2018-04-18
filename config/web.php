@@ -16,7 +16,14 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
     ],
     'language' => 'es-ES',
+    'sourceLanguage' => 'es-ES',
+    'name' => 'Raspberry WEB',
     'components' => [
+        'formatter' => [
+            'timeZone' => 'Europe/Madrid',
+            'datetimeFormat' => $params['datetimeFormat'],
+            'dateFormat' => $params['dateFormat'],
+        ],
         'view' => [
             'theme' => [
                 'basePath' => '@app/themes/'.$tema,
@@ -32,7 +39,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'app\models\Usuarios',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [

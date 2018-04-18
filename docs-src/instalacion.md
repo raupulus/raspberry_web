@@ -2,8 +2,10 @@
 
 ## En local
 
-Explicar.
+```bash
+git clone https://github.com/fryntiz/raspberry_web
+```
 
-## En la nube
-
-Explicar.
+```bash
+composer install
+```
