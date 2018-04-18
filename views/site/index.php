@@ -54,8 +54,8 @@ $this->title = 'Raspberry PI Control WEB';
 
                 <p>
                     <?= Html::a('Ir a GPIO',
-                        ['site/gpio'],
-                        ['class' => 'btn btn-default']) ?>
+                               ['site/gpio'],
+                               ['class' => 'btn btn-default']) ?>
                 </p>
             </div>
 
@@ -82,12 +82,19 @@ $this->title = 'Raspberry PI Control WEB';
             <div class="col-lg-4">
                 <h2>Actualizar</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>
+                    Menú con la posibilidad de actualizar el sistema operativo
+                    raspbian (No se contempla otros) y además permite elegir
+                    también para actualizar firmware.
+                    <br />
+                    Es posible actualizar ambas funciones a la vez.
+                </p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions</a></p>
+                <p>
+                    <?= Html::a('Ir a menú Actualizar',
+                               ['site/actualizar'],
+                               ['class' => 'btn btn-default']) ?>
+                </p>
             </div>
         </div>
 
