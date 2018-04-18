@@ -1,3 +1,4 @@
 # Glosario de términos
 
-Indicar y definir uno por uno.
+GPIO → Pines de entrada y salida
+RPI → Abreviación de Raspberry PI
